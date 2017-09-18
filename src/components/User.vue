@@ -5,7 +5,10 @@
 
 <script>
 export default {
-    name:'user'
+    name:'user',
+    data(){
+        id:1
+    }
 }
 </script>
 

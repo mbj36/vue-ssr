@@ -12,7 +12,7 @@ Vue.use(Router)
 export default new Router({
     mode: 'history',
     routes: [{
-            path: '/hello',
+            path: '/',
             component: Hello,
             name: 'hello'
         },
@@ -25,7 +25,7 @@ export default new Router({
             path: '/admin',
             component: Admin,
             children: [{
-                    path: 'user',
+                    path: 'user/:id',
                     component: User,
                     name: 'user'
                 },
@@ -35,6 +35,10 @@ export default new Router({
                     name: 'superuser'
                 }
             ]
+        },
+        {
+            path: '*',
+            component: Error
         }
     ]
 })
